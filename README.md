@@ -169,10 +169,6 @@ We welcome contributions! Please see our Contributing Guidelines for details.
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Security
-
-If you discover any security-related issues, please email security@telosprotocol.com instead of using the issue tracker.
-
 ## Contact
 
 - Website: https://telosai.xyz
