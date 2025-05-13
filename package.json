@@ -1,0 +1,53 @@
+{
+  "name": "telos-ai-agent",
+  "version": "1.0.0",
+  "description": "A decentralized protocol for cognitive enhancement and mental wellness, powered by $TELOS token",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "blockchain",
+    "cognitive",
+    "web3",
+    "token",
+    "mental-wellness"
+  ],
+  "author": "Telos Protocol",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/telos-protocol.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/telos-protocol/issues"
+  },
+  "homepage": "https://github.com/yourusername/telos-protocol#readme"
+} 

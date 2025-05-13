@@ -1,0 +1,307 @@
+{
+    "abi": [
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "uint256",
+                    "name": "challengeId",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string",
+                    "name": "challengeType",
+                    "type": "string"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "stakeAmount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "ChallengeCreated",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "uint256",
+                    "name": "challengeId",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "reward",
+                    "type": "uint256"
+                }
+            ],
+            "name": "ChallengeCompleted",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "uint256",
+                    "name": "challengeId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "ChallengeFailed",
+            "type": "event"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "challengeType",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "duration",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "stakeAmount",
+                    "type": "uint256"
+                }
+            ],
+            "name": "createChallenge",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "challengeId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "verifyCompletion",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "challengeId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "failChallenge",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                }
+            ],
+            "name": "getUserChallenges",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "id",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "challengeType",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "startTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "duration",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "stakeAmount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "completed",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "failed",
+                            "type": "bool"
+                        }
+                    ],
+                    "internalType": "struct ChallengeContract.Challenge[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "challengeId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getChallengeDetails",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "id",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "challengeType",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "startTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "duration",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "stakeAmount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "completed",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "failed",
+                            "type": "bool"
+                        }
+                    ],
+                    "internalType": "struct ChallengeContract.Challenge",
+                    "name": "",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                }
+            ],
+            "name": "getActiveChallenges",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "id",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "challengeType",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "startTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "duration",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "stakeAmount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "completed",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "failed",
+                            "type": "bool"
+                        }
+                    ],
+                    "internalType": "struct ChallengeContract.Challenge[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ]
+} 
